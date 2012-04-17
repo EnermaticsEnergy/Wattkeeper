@@ -1,0 +1,34 @@
+﻿<script type="text/javascript" language="javascript">
+    function DoItNow() {
+        try {
+            alert('1');
+            $.getScript('Names.js');
+            alert('2');
+        } catch (ex) {
+        alert(ex);
+        }
+    }
+</script>
+
+<div class="names">
+    <table border="1" class="names_table">
+        <tr>
+            <th>
+                Please write names seperated with commas.
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input id="m_txtCommaDelimetedNames" type="text" value="Piet,Koos,Jan" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="PrintNames" value="PrintNames" type="button" onclick="DoItNow();"/>
+                <input id="LoadCSS" value="LoadCSS" type="button" onclick="LoadCSS();"/>
+                <input id="RemoveCSS" value="RemoveCSS" type="button" onclick="RemoveCSS();"/>
+                <input id="Alerting" value="Alerting" type="button" onclick="alert('Alerting!');"/>
+            </td>
+        </tr>
+    </table>
+</div>

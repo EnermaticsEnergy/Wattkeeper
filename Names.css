@@ -1,0 +1,22 @@
+﻿.names
+{
+    background-color: #424deb;
+    height: 350px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.names_table
+{
+    background-color: #cccccc;
+    color: #000000;
+}
+.names_table th
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+.names_table td
+{
+    text-align: center;
+}
