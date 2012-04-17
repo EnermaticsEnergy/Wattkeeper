@@ -2,9 +2,27 @@
     <head>
         <title>Wattkeeper Mobile Test</title>
         <script type="text/javascript" src="jquery/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="TheNewTest.js"></script>
+        <script type="text/javascript" language="javascript">
+            function DoItNow() {
+                try {
+                    alert('1');
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'TheNewTest.js';
+                    $("#ThePlace").append(script);
+                    alert('2');
+                }
+                catch (err) {
+                    alert(err);
+                }
+            }
+        </script>
     </head>
     <body>
-        <input id="js" value="js" type="button" onclick="$.getScript('TheNewTest.js');"/>
+        <input id="js" value="js1" type="button" onclick="$.getScript('TheNewTest.js');"/>
+        <input id="Button1" value="js2" type="button" onclick="DoItNow();"/>
+        <input id="Button2" value="clear" type="button" onclick="$('#ThePlace').empty();"/>
+        <div id="ThePlace">
+        </div>
     </body>
 </html>
