@@ -2,7 +2,17 @@
     function DoItNow() {
         try {
             alert('1');
-            $.getScript('Names.js');
+
+            $.getScript("Names.js")
+                .done(function (script, textStatus) {
+                    alert(textStatus);
+                })
+                .fail(function (jqxhr, settings, exception) {
+                    alert(exception);
+                }); 
+
+
+
             alert('2');
         } catch (ex) {
         alert(ex);
