@@ -56,7 +56,6 @@ function RemoveCSS() {
     }
 }
 
-
 function StyleAlreadyLoaded(filename) {
     try {
         var targetelement = "link";
