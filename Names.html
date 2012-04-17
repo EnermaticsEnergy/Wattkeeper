@@ -5,10 +5,13 @@
 
             $.getScript("Names.js")
                 .done(function (script, textStatus) {
-                    alert(textStatus);
+                    alert('script:' + script);
+                    alert('textStatus:' + textStatus);
                 })
                 .fail(function (jqxhr, settings, exception) {
-                    alert(exception);
+                    alert('jqxhr:' + jqxhr);
+                    alert('settings:' + settings);
+                    alert('exception:' + exception);
                 }); 
 
 
