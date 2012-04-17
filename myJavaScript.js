@@ -1,6 +1,6 @@
-﻿var m_Names = null;
+﻿function Run() {
+    var m_Names = null;
 
-function Run() {
     if (document.getElementById('m_txtNames') != null) {
         m_Names = document.getElementById('m_txtNames').value;
     }
@@ -21,5 +21,3 @@ function PrintNames(asParams) {
         alert('No Names Specified.');
     }
 }
-
-Run();

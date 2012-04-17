@@ -1,29 +1,4 @@
-﻿<script type="text/javascript" language="javascript">
-    function DoItNow() {
-        try {
-            alert('1');
-
-            $.getScript("Names.js")
-                .done(function (script, textStatus) {
-                    alert('script:' + script);
-                    alert('textStatus:' + textStatus);
-                })
-                .fail(function (jqxhr, settings, exception) {
-                    alert('jqxhr:' + jqxhr);
-                    alert('jqxhr.value:' + jqxhr.value);
-                    alert('settings:' + settings);
-                    alert('exception:' + exception);
-                }); 
-
-
-
-            alert('2');
-        } catch (ex) {
-        alert(ex);
-        }
-    }
-</script>
-
+﻿<script type="text/javascript" src="Names.js"></script>
 <div class="names">
     <table border="1" class="names_table">
         <tr>
@@ -38,7 +13,7 @@
         </tr>
         <tr>
             <td>
-                <input id="PrintNames" value="PrintNames" type="button" onclick="DoItNow();"/>
+                <input id="PrintNames" value="PrintNames" type="button" onclick="NamesRun();"/>
                 <input id="LoadCSS" value="LoadCSS" type="button" onclick="LoadCSS();"/>
                 <input id="RemoveCSS" value="RemoveCSS" type="button" onclick="RemoveCSS();"/>
                 <input id="Alerting" value="Alerting" type="button" onclick="alert('Alerting!');"/>

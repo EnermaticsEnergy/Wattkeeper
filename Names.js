@@ -1,13 +1,13 @@
-﻿var m_Names = null;
+﻿function NamesRun() {
+    var m_CommaDelimetedNames = null;
 
-function Run() {
     try {
         if (document.getElementById('m_txtCommaDelimetedNames') != null) {
-            m_Names = document.getElementById('m_txtCommaDelimetedNames').value;
+            m_CommaDelimetedNames = document.getElementById('m_txtCommaDelimetedNames').value;
         }
 
         var NamesArray = new Array();
-        NamesArray = m_Names.split(",");
+        NamesArray = m_CommaDelimetedNames.split(",");
         PrintNames(NamesArray);
     } catch (ex) {
         alert(ex);
@@ -74,6 +74,3 @@ function StyleAlreadyLoaded(filename) {
 
     return false;
 }
-
-
-Run();
